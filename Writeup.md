@@ -4,7 +4,7 @@
 
 En la página del CTF ir al apartado de rules  y hasta el final de esa página está la flag
 
-![c54b75e81b7c5c139e233643fab197d8.png](https://drive.google.com/file/d/1WccLPK-YE3hV7LIWtTeoFf_Go5jNGvtY/view?usp=share_link)
+![](https://github.com/fr0stby73/CTF-ITESO-2022/blob/main/fotos/c54b75e81b7c5c139e233643fab197d8.png)
 
 **flag{M1\_Pr1m3r4\_fl46}**
 
