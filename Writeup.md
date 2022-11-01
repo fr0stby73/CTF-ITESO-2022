@@ -7,7 +7,6 @@ En la página del CTF ir al apartado de rules  y hasta el final de esa página 
 ![](https://github.com/fr0stby73/CTF-ITESO-2022/blob/main/fotos/c54b75e81b7c5c139e233643fab197d8.png)
 
 **flag{M1\_Pr1m3r4\_fl46}**
-![c54b75e81b7c5c139e233643fab197d8](https://user-images.githubusercontent.com/70277640/199324838-fd893c65-c853-4fd2-8b76-db33edf560b0.png)
 
 # Web
 
