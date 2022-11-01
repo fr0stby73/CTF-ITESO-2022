@@ -7,6 +7,7 @@ En la página del CTF ir al apartado de rules  y hasta el final de esa página 
 ![](https://github.com/fr0stby73/CTF-ITESO-2022/blob/main/fotos/c54b75e81b7c5c139e233643fab197d8.png)
 
 **flag{M1\_Pr1m3r4\_fl46}**
+![c54b75e81b7c5c139e233643fab197d8](https://user-images.githubusercontent.com/70277640/199324838-fd893c65-c853-4fd2-8b76-db33edf560b0.png)
 
 # Web
 
@@ -14,7 +15,7 @@ En la página del CTF ir al apartado de rules  y hasta el final de esa página 
 
 En la página principal del sitio del CTF abrimos las herramientas de desarrollador y en el inspector de código buscamos "flag". Encontramos la flag como un comentario dentro de un tag a
 
-<img src=":/4eb1a0787b2d400db7facce27e322675" alt="b3898db6115ab22e6f602c58ee36c720.png" width="738" height="155" class="jop-noMdConv">
+![b3898db6115ab22e6f602c58ee36c720](https://user-images.githubusercontent.com/70277640/199325004-de8b300c-076b-4c8a-be68-9644b1af0e05.png)
 
 **flag{h7ml_1nd3x}**
 
