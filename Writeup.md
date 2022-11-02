@@ -126,19 +126,19 @@ Al haber completado todos los retos anteriores se nos abrirá esta nueva categor
 
 Para este reto era necesario ir al laboratorio T-205, o por lo menos estar cerca de él, y usar una antena de red que pudiera ponerse en modo monitor. En mi caso utilicé una antena TP-Link TL-WN722N. Una vez conectada la antena, la ponemos en modo monitor con los siguientes comandos (en mi caso la antena se llama wlan0, puede que el nombre cambie para ti)
 
-<img src=":/bb8c6b5f328441658418306dc9d3e667" alt="9d199689b0527ba43c90568bee9c8a3d.png" width="409" height="441" class="jop-noMdConv">
+![9d199689b0527ba43c90568bee9c8a3d](https://user-images.githubusercontent.com/70277640/199389965-7ff72efe-070f-4900-a2b1-409a61700787.png)
 
 Una vez que está en modo monitor escaneamos las redes que hay para obtener el BSSID y el canal de la red ITESO_CTF con el comando `airodump-ng wlan0 --encrypt wep`. Ya que tenemos esas dos cosas podemos empezar a inyectar paquetes en la red con el comando `besside-ng wlan0 -c 8 -b E4:E1:30:64:66:7C`
 
-<img src=":/197289a4840f4007996f75c8b055fcb6" alt="17917ec0ad0d7b57e608768cc8f530ed.png" width="520" height="533" class="jop-noMdConv">
+![17917ec0ad0d7b57e608768cc8f530ed](https://user-images.githubusercontent.com/70277640/199390058-e98cec0d-8717-461c-8810-b8db8c556bfc.png)
 
 Vemos que se inyectaron los paquetes suficientes para obtener la contraseña de la red. Usamos el comando `aircrack-ng ./wep.cap` para ver la contraseña en texto plano
 
-<img src=":/7a1e1d6b6c804ea78245040acdc5555b" alt="7ad81ff64241ebdb9457f6ccf9f56788.png" width="560" height="250" class="jop-noMdConv">
+![7ad81ff64241ebdb9457f6ccf9f56788](https://user-images.githubusercontent.com/70277640/199390192-c6c6be10-817b-4406-abb7-c01b8734e14a.png)
 
 Accedemos a la red con la contraseña que acabamos de obtener y en un navegador web ingresamos la IP del gateway de la red, lo que nos mostrará una página para acceder a la administración del modem que nos pedirá una contraseña. Accedemos con la misma contraseña que accedimos a la red y vamos a la sección de servicios en donde encontraremos el borrador SMS y ahí encontraremos la flag del reto
 
-<img src=":/c28c5b3cede945b085b307a9686bfc6d" alt="36c894e41eb9134a400a4c20466f8854.png" width="640" height="397" class="jop-noMdConv">
+![36c894e41eb9134a400a4c20466f8854](https://user-images.githubusercontent.com/70277640/199390239-bc57b527-6590-4057-86fc-b15935969d6d.png)
 
 **FLAG{5M5\_D35d3\_M0d3m}**
 
@@ -148,23 +148,24 @@ Accedemos a la red con la contraseña que acabamos de obtener y en un navegador 
 
 Le damos click al link que está en la descripción del reto y nos redigirá a una página con un montón de hashes
 
-<img src=":/610f0464752f4b4c8fc8603ec6b1b61b" alt="ad9a0703e5e5a3117fc07d34b36f9fe1.png" width="833" height="324" class="jop-noMdConv">
+![ad9a0703e5e5a3117fc07d34b36f9fe1](https://user-images.githubusercontent.com/70277640/199390297-2b312fae-0897-4b2f-a0ad-40aeb84cde75.png)
 
 Para separar los hashes en diferentes lineas cree un pequeño programa en python que me los regresa ya separados en diferentes lineas. De esta forma puedo ir metiendo de 20 en 20 hashes en CrackStation
 
-<img src=":/4c57646a4cbe45699c0f3f8bbfc89687" alt="4d04b56a4d269aa2477700c75f129aa2.png" width="427" height="139" class="jop-noMdConv"> <img src=":/c6b6b6dcea78439da25734716d0be95d" alt="c93fcb137ab1e120216c1f2e8b838e05.png" width="443" height="159" class="jop-noMdConv">
+![4d04b56a4d269aa2477700c75f129aa2](https://user-images.githubusercontent.com/70277640/199390458-734d501a-f82d-4ea0-988b-cf6de541f315.png)
+![c93fcb137ab1e120216c1f2e8b838e05](https://user-images.githubusercontent.com/70277640/199390509-be3eabcc-7c3a-4f26-beec-079f65c1252a.png)
 
 Al ingresar los primeros 20 hashes vemos que cada hash es una letra de un mensaje que nos dejaron para el reto
 
-<img src=":/57be518e91f44ced9a7dfcf17530dca2" alt="2ceaaadaeae56610f2c4e2b4df71c6d1.png" width="638" height="393" class="jop-noMdConv">
+![2ceaaadaeae56610f2c4e2b4df71c6d1](https://user-images.githubusercontent.com/70277640/199390617-ae04b3d9-746a-45b1-a00a-0841e1cea1f6.png)
 
 Asumiendo que la flag está hasta el final del mensaje tomo los últimos 20 hashes y los meto en CrackStation
 
-<img src=":/8952ffcc6b7542beb017bca718897fce" alt="a08ee78675b4a917c3a622ee10a33a6b.png" width="681" height="426" class="jop-noMdConv">
+![a08ee78675b4a917c3a622ee10a33a6b](https://user-images.githubusercontent.com/70277640/199390692-32b53a5f-8837-4282-9c60-27cff3fc1ccd.png)
 
 Ya que la flag no está completa meto unos cuantos hashes que están atrás de los últimos 20 que ingresé y obtengo la flag completa
 
-<img src=":/0321fea96d684554ab69fb689f25436f" alt="3e68acac059e1563a7bf541848a390af.png" width="688" height="437" class="jop-noMdConv">
+![3e68acac059e1563a7bf541848a390af](https://user-images.githubusercontent.com/70277640/199390760-a82e8e4f-75ff-43ff-8d4a-2f4269888d42.png)
 
 **flag{WELC0ME-T0-MEXICAN-H4SHES}**
 
@@ -172,11 +173,11 @@ Ya que la flag no está completa meto unos cuantos hashes que están atrás de l
 
 Le damos click al link que está en la descripción del reto y nos redigirá a una página con el texto cifrado
 
-<img src=":/12184893d84b4539b2a96c7e12e91062" alt="c91a5fd2444773689f0da4c43bf55a8c.png" width="1003" height="79" class="jop-noMdConv">
+![c91a5fd2444773689f0da4c43bf55a8c](https://user-images.githubusercontent.com/70277640/199390942-b0896d8a-73e6-40e3-b2b8-79830c86bd28.png)
 
 Al leer la hint del reto vemos que es un criptograma. Buscamos un desencriptador de criptogramas online y metemos el texto del reto ahí para obtener la flag
 
-<img src=":/e909310801134c3ba201ffe9059186a4" alt="2407418019151400a2a67fcf1f148ec8.png" width="956" height="103" class="jop-noMdConv">
+![2407418019151400a2a67fcf1f148ec8](https://user-images.githubusercontent.com/70277640/199390995-3effb0ed-88d7-4cb9-8d25-81f950a35045.png)
 
 **FLAGISARADARARDR**
 
