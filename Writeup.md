@@ -44,7 +44,7 @@ Copiamos esta cadena de texto y en cyberchef la decodificamos como base64 para e
 
 Descargamos el archivo pcap de la descripción del reto y lo abrimos con wireshark. Al darle una revisada rápida vemos que hay tráfico de FTP. Filtramos la captura para ver el tráfico de FTP únicamente y vemos la contraseña que ingresaron para acceder
 
-<img src=":/88d1ec9748aa42e1ad0aa9e97711a348" alt="3d903658322f1b8dfa120a26775d28c6.png" width="644" height="170" class="jop-noMdConv">
+![3d903658322f1b8dfa120a26775d28c6](https://user-images.githubusercontent.com/70277640/199373049-280e3797-6730-4f91-aef2-87f9efb965d7.png)
 
 **flag{ftp\_is\_better\_than\_dropbox}**
 
@@ -52,11 +52,11 @@ Descargamos el archivo pcap de la descripción del reto y lo abrimos con wiresha
 
 Descargamos la imagen que está en la descripción del reto y en kali usamos el comando strings sobre ese archivo para encontrar que información tiene la imagen
 
-<img src=":/394d3d5bfe844f4695037cc6415408b7" alt="6382d41315889506993b0f332a9d4eea.png" width="186" height="267" class="jop-noMdConv">
+![6382d41315889506993b0f332a9d4eea](https://user-images.githubusercontent.com/70277640/199373127-734fbcd9-6ade-4e69-a802-7060f05e9e7b.png)
 
 Vemos que hay un archivo matryoshka2.jpg dentro de la imagen que descargamos, por lo que usamos unzip para sacar esa imagen, lo cual nos da otra imagen. unzippeamos los archivos hasta que conseguimos un archivo de texto llamado flag.txt que contiene la flag
 
-![4d5139dd222fada8830e7e6734a347cd.png](:/25614d78b7344ed187bb0fd453f55f77)
+![4d5139dd222fada8830e7e6734a347cd](https://user-images.githubusercontent.com/70277640/199373146-84f1354d-50bd-4d58-b919-4146fd6dad37.png)
 
 **flag{573g4n0gr4f14}**
 
@@ -66,7 +66,7 @@ Vemos que hay un archivo matryoshka2.jpg dentro de la imagen que descargamos, po
 
 Copiamos el texto cifrado y lo decodificamos como binario en cyberchef para obtener la flag
 
-<img src=":/f07c1d8b9233408ab3751b8272329eed" alt="2bab2d3862f8c725518bac5581712dee.png" width="607" height="231" class="jop-noMdConv">
+![2bab2d3862f8c725518bac5581712dee](https://user-images.githubusercontent.com/70277640/199373248-f0999d68-d430-426b-851e-2b46df09aeff.png)
 
 **flag{un05\_Y\_c3r0s)**
 
@@ -74,7 +74,7 @@ Copiamos el texto cifrado y lo decodificamos como binario en cyberchef para obte
 
 Copiamos el texto cifrado y lo decodificamos como hexadecimal en cyberchef para obtener la flag
 
-<img src=":/eae6ea9d969140b6b5fb905b99ebb028" alt="84a0e9e17b215ce31209daf9e8798c4c.png" width="520" height="262" class="jop-noMdConv">
+![84a0e9e17b215ce31209daf9e8798c4c](https://user-images.githubusercontent.com/70277640/199373336-5fbfb194-9afa-4a54-a39e-02b472eee824.png)
 
 **flag{H3x4d3c1m4l}**
 
@@ -82,7 +82,7 @@ Copiamos el texto cifrado y lo decodificamos como hexadecimal en cyberchef para 
 
 Copiamos el texto cifrado y usando el algoritmo de ROT13 lo decodificamos con cyberchef para obtener la flag
 
-<img src=":/93073ff92c104a7d80ae5035451b8630" alt="e0befb9da45b8d6d28ca5cb2692827ca.png" width="514" height="257" class="jop-noMdConv">
+![e0befb9da45b8d6d28ca5cb2692827ca](https://user-images.githubusercontent.com/70277640/199373498-f7cde035-8e7d-46c0-b0b7-27b5194a82a9.png)
 
 ** flag{N0\_35\_L0\_m15m0\_c4354r\_c1ph3r\_qu3\_l1ttl3\_c4354r}**
 
@@ -90,7 +90,7 @@ Copiamos el texto cifrado y usando el algoritmo de ROT13 lo decodificamos con cy
 
 Copiamos la bandera cifrada y en cyberchef utilizamos el modo enigma con las configuraciones especificadas en el reto para obtener la flag
 
-<img src=":/72b896b860374e1b879cc71f65a1dc93" alt="9c6fd97ca935588673e29a54017f1eb4.png" width="397" height="320" class="jop-noMdConv">
+![9c6fd97ca935588673e29a54017f1eb4](https://user-images.githubusercontent.com/70277640/199373558-d3697794-a779-47a2-837f-c65722e71214.png)
 
 **FLAG{N0\_T0D0\_35\_CYB3R\_CH3F}**
 
@@ -98,15 +98,15 @@ Copiamos la bandera cifrada y en cyberchef utilizamos el modo enigma con las con
 
 Descargamos el archivo .zip que está en la descripción del challenge y lo descomprimimos en la terminal de kali
 
-<img src=":/3e3659d05590488c89af92a1d690f702" alt="f5a782b9b5020f09d3ae255f1d043e5e.png" width="395" height="273" class="jop-noMdConv">
+![f5a782b9b5020f09d3ae255f1d043e5e](https://user-images.githubusercontent.com/70277640/199373630-e3750c80-3337-4b0e-9b5e-0e81eed187c5.png)
 
 Al abrir el archivo ende.py con nano vemos dentro del código que nos explica cómo desencriptar un archivo. Para hacer esto necesitamos el archivo que queremos desencriptar y aunque no sabemos a este punto también necesitaremos la contraseña, pero esa también la tenemos dentro del archivo pw.txt
 
-<img src=":/bb0afef2802045e1929170323361f27b" alt="b50d9c27592fc17a85e71aba647d1f50.png" width="336" height="517" class="jop-noMdConv">
+![b50d9c27592fc17a85e71aba647d1f50](https://user-images.githubusercontent.com/70277640/199373660-d0ee32a0-2047-4370-b3dd-e0d491b56306.png)
 
 Ejecutamos el archivo ende.py con el archivo de texto a desencriptar y con la contraseña proporcionada y obtenemos la flag
 
-<img src=":/edc12cb4cb6b4a33a6b6a4993f8a3865" alt="4a611a0cd705943cf596fb8e84f76aa4.png" width="372" height="168" class="jop-noMdConv">
+![4a611a0cd705943cf596fb8e84f76aa4](https://user-images.githubusercontent.com/70277640/199373684-1f3c775a-9dbe-4868-b0a8-032ad463a8e1.png)
 
 **flag{R34l_Crypt0}**
 
@@ -116,7 +116,7 @@ Ejecutamos el archivo ende.py con el archivo de texto a desencriptar y con la co
 
 Al haber completado todos los retos anteriores se nos abrirá esta nueva categoría, junto con Real Hacking, Hacking WIFI y W10. Para obtener la flag basta con abrir la descripción del reto, ahí se nos mostrará la flag y también el link para descargar la máquina de Windows necesaria para hacer los retos de W10
 
-<img src=":/43fb0899db4749a792ff426654477868" alt="25212be617241ab115c403dfb6623ea5.png" width="307" height="426" class="jop-noMdConv">
+![25212be617241ab115c403dfb6623ea5](https://user-images.githubusercontent.com/70277640/199373797-2f03d8f8-cf6e-4790-8745-1e2079ff9fc4.png)
 
 **FLAG{CH3ckp01n7}**
 
