@@ -273,4 +273,4 @@ Al entrar al repositorio y ver el historial de commits encontraremos un commit c
 
 ![image](https://user-images.githubusercontent.com/70277640/199791379-ef7ded06-9a9a-48fa-aaba-5f940caf3f49.png)
 
- **FLAG{ALWAYS\_CHECK\_COMMITS} **
+ **FLAG{ALWAYS\_CHECK\_COMMITS}**
